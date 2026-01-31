@@ -10,7 +10,7 @@ An end‑to‑end **process monitoring** project for a hydrocracker:
 
 ## What this repo does
 
-### Fuel‑Gas Soft Sensor (regression)
+### Fuel‑Gas Soft Sensor 
 Predicts *expected* fuel‑gas energy (or proxy) from process signals (reactor T/P, feed rate, ΔP, etc.).
 The model output is `y_pred`. The measured value is `y_actual`.
 
