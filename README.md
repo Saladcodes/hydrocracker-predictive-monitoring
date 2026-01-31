@@ -1,4 +1,4 @@
-# Hydrocracker OFM — Fuel Gas Soft Sensor + Multivariate OFM (MSPC)
+# Hydrocracker Prediction Dashboard — Fuel Gas Soft Sensor + Multivariate OFM (MSPC)
 
 An end‑to‑end **process monitoring** project for a hydrocracker:
 1) train a **Fuel Gas soft sensor** (regression),
