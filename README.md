@@ -8,7 +8,7 @@ An end‑to‑end **process monitoring** project for a hydrocracker:
 
 ---
 
-## 🧠 What this repo does
+## What this repo does
 
 ### Fuel‑Gas Soft Sensor (regression)
 Predicts *expected* fuel‑gas energy (or proxy) from process signals (reactor T/P, feed rate, ΔP, etc.).
@@ -37,7 +37,7 @@ Root cause is estimated using top PCA contribution logic.
 
 ---
 
-## 📦 Project layout
+## Project layout
 
 - `src/ofm_fg_ofm/` — pipelines + model logic
 - `src/ofm_fg_ofm/data/synthetic/` — synthetic generator
@@ -51,7 +51,7 @@ Root cause is estimated using top PCA contribution logic.
 
 ---
 
-## 🚀 Quickstart (demo)
+## Quickstart (demo)
 
 This repo **does not ship pre-generated data/models** (keeps the zip small).
 
@@ -73,7 +73,7 @@ streamlit run dashboard/app.py
 
 ---
 
-## 🔁 Full pipeline (generate → train → score)
+## Full pipeline (generate → train → score)
 
 ```bash
 # 1) Make dataset (generates synthetic data by default)
@@ -94,13 +94,13 @@ python -m ofm_fg_ofm.pipelines.score_ofm --data data/processed/dataset.csv --sof
 
 ---
 
-## 🧩 Ensemble model: what changes and what doesn’t
+##  Ensemble model: what changes and what doesn’t
 
 When you switch `train_soft_sensor.py --model ensemble`:
-- ✅ `y_pred` changes (better bias/variance tradeoff in many cases)
-- ✅ residual plots change (`residual`, `residual_ewma`, `residual_dev`)
-- ✅ residual‑based alarms can change (because limits are learned from residual stats)
-- ✅ “Actual vs Predicted” chart changes
+-  `y_pred` changes (better bias/variance tradeoff in many cases)
+-  residual plots change (`residual`, `residual_ewma`, `residual_dev`)
+-  residual‑based alarms can change (because limits are learned from residual stats)
+-  “Actual vs Predicted” chart changes
 
 What stays the same (unless you re-train MSPC on different features / baseline window):
 - MSPC features (T²/SPE) depend on the process feature matrix; not on the regressor *directly*
@@ -113,7 +113,7 @@ What stays the same (unless you re-train MSPC on different features / baseline w
 
 ---
 
-## ✅ Notes on cleanliness
+## Notes on cleanliness
 
 This cleaned version intentionally excludes:
 - local virtual environments (`.venv/`)
@@ -148,3 +148,11 @@ Note: Advanced mode requires the package to be importable. From the project root
 ```bash
 pip install -e .
 ```
+
+---
+## Dashboard Preview
+![](docs/screenshots/1.png)
+![](docs/screenshots/2.png)
+![](docs/screenshots/3.png)
+![](docs/screenshots/4.png)
+![](docs/screenshots/5.png)
