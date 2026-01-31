@@ -53,7 +53,7 @@ Root cause is estimated using top PCA contribution logic.
 
 ## Quickstart (demo)
 
-This repo **does not ship pre-generated data/models** (keeps the zip small).
+This repo **does not ship pre-generated data/models**.
 
 Run the demo pipeline once to generate:
 - 5 months of synthetic data at 5-minute sampling
