@@ -586,7 +586,7 @@ def plot_failure_trajectory(
 # -------------------- Streamlit App --------------------
 st.set_page_config(page_title="Hydrocracker OFM Dashboard", layout="wide")
 
-st.title("Hydrocracker OFM Dashboard (Fuel Gas Soft Sensor + MSPC)")
+st.title("Hydrocracker OFM Dashboard")
 
 # Sidebar controls
 with st.sidebar:
