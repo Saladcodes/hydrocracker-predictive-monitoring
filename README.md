@@ -94,7 +94,7 @@ python -m ofm_fg_ofm.pipelines.score_ofm --data data/processed/dataset.csv --sof
 
 ---
 
-##  Ensemble model: what changes and what doesn’t
+##  Ensemble model: 
 
 When you switch `train_soft_sensor.py --model ensemble`:
 -  `y_pred` changes (better bias/variance tradeoff in many cases)
@@ -110,18 +110,6 @@ What stays the same (unless you re-train MSPC on different features / baseline w
 - time‑series aware validation (forward split),
 - drift monitoring,
 - periodic recalibration.
-
----
-
-## Notes on cleanliness
-
-This cleaned version intentionally excludes:
-- local virtual environments (`.venv/`)
-- IDE folders (`.idea/`)
-- very large artifacts (`data/raw/synth_200k.csv`, huge outputs)
-
-In particular, **data/models/outputs are not committed**. Use `scripts/run_demo_pipeline.py`
-or the pipeline commands above to generate them locally.
 
 ---
 
