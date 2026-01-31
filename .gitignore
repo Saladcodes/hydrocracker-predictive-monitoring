@@ -1,0 +1,31 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+data/raw/
+data/processed/
+models/
+outputs/
+.streamlit/
+
+
+# ---- Local env ----
+.venv/
+__pycache__/
+*.pyc
+.idea/
+
+# ---- Data & artifacts (keep only small demo files) ----
+data/raw/*.csv
+data/processed/*.csv
+!data/raw/synth_demo_10k.csv
+!data/processed/dataset_demo_10k.csv
+
+outputs/*.csv
+!outputs/scores_demo_20k.csv
+
+# ---- Models (optional; keep small joblib in repo if you want) ----
+*.joblib
